@@ -1,20 +1,20 @@
 # Solr docker image for Sunspot GEM
 
-This is a docker image based on the official [Solr docker image](https://hub.docker.com/_/solr), solr:7.6-alpine  pre-configured with schema files to support the 
+This is a docker image based on the official [Solr docker image](https://hub.docker.com/_/solr), solr:7.7-alpine  pre-configured with schema files to support the
 [sunspot gem](https://github.com/sunspot/sunspot).
 
-You have find the [docker image here](https://cloud.docker.com/repository/docker/recipedude/solr-sunspot).
+You have find the [docker image here](https://cloud.docker.com/repository/docker/kirillplatonov/solr-sunspot).
 
 ## Why
 
-The [sunspot gem](https://github.com/sunspot/sunspot) uses [it's own schema](https://github.com/sunspot/sunspot/blob/master/sunspot_solr/solr/solr/configsets/sunspot/conf/schema.xml) 
+The [sunspot gem](https://github.com/sunspot/sunspot) uses [it's own schema](https://github.com/sunspot/sunspot/blob/master/sunspot_solr/solr/solr/configsets/sunspot/conf/schema.xml)
 that is incompatible with the default provided in the official Solr docker image.
 
 Refer to [Cannot reindex solr container](https://github.com/sunspot/sunspot/issues/916) for more information on this.
 
 ## Pre-configured core
 
-This image pre-configures a ```development``` core that should be ready to use.
+This image pre-configures a `development` and `test` cores that should be ready to use.
 
 ## Fixes to the schema for Solr 7 compatibility
 

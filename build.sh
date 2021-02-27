@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build -t recipedude/solr-sunspot:latest .
+docker build -t kirillplatonov/solr-sunspot:latest .

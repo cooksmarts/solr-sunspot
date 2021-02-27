@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker push recipedude/solr-sunspot
+docker push kirillplatonov/solr-sunspot

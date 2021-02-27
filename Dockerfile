@@ -1,4 +1,4 @@
-FROM solr:7.6-alpine
+FROM solr:7.7-alpine
 
 USER root
 
@@ -10,4 +10,8 @@ RUN chmod 0644 /opt/solr/server/solr/configsets/_default/conf/*.xml
 
 USER solr
 
-ENTRYPOINT ["docker-entrypoint.sh", "solr-precreate", "development"]
+# Create single core
+# ENTRYPOINT ["docker-entrypoint.sh", "precreate-core", "development"
+
+# Create multiple cores
+ENTRYPOINT ["bash", "-c", "precreate-core development; precreate-core test; exec solr -f"]
